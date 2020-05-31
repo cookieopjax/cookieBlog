@@ -7,7 +7,7 @@
 2. Slider 
 
 ### alpha 1.1
-1. advance "info' page
+1. advance "info" page
 2. Slider : add image
 
 
