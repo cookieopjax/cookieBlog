@@ -61,14 +61,7 @@ class cookieCard extends StatelessWidget {
                 radius: 80.0,
               ),
             ),
-            SizedBox(height: 10.0),
-            Text(
-              'NAME',
-              style: TextStyle(
-                color: Colors.grey,
-              ),
-            ),
-            SizedBox(height: 6.0),
+            SizedBox(height: 20.0),
             Text(
               '餅乾',
               style: TextStyle(
@@ -77,53 +70,130 @@ class cookieCard extends StatelessWidget {
                   fontSize: 38.0,
                   fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 15.0),
-            Row(
+            Text(
+              '普通的資工系學生、射擊遊戲愛好者、略懂攝影、平面設計、影音剪輯、電繪。\n\n覺得中文區域的程式教學過少，因此想寫些中文教學來分享自己所學。',
+              style: TextStyle(
+                  color: Colors.white,
+                  letterSpacing: 2.0,
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 100.0),
+            Column(
               children: <Widget>[
-                Expanded(
-                  child: RaisedButton(
-                    child: Row(
-                      children: <Widget>[
-                        Icon(Icons.mail),
-                        SizedBox(
-                          width: 8.0,
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: RaisedButton(
+                        child: Row(
+                          children: <Widget>[
+                            Image(
+                              image: NetworkImage('https://upload.cc/i1/2020/05/25/B4nDfU.png'),
+                              width:20.0,
+                            ),
+                            SizedBox(
+                              width: 8.0,
+                            ),
+                            Text(
+                              'Facebook',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18.0
+                              ),
+                            ),
+                          ],
                         ),
-                        Text(
-                          'facebook',
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+                        onPressed: () =>
+                            _launchURL('https://www.facebook.com/Meekcivik/'),
+                        color: Colors.grey[800],
+                      ),
                     ),
-                    onPressed: () =>
-                        _launchURL('https://www.facebook.com/Meekcivik/'),
-                    color: Colors.grey[800],
-                  ),
-                ),
-                SizedBox(
-                  width: 10.0,
-                ),
-                Expanded(
-                  child: RaisedButton(
-                    child: Row(
-                      children: <Widget>[
-                        Icon(Icons.phone),
-                        SizedBox(
-                          width: 8.0,
-                        ),
-                        Text(
-                          'GitHub',
-                          style: TextStyle(
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+                    SizedBox(
+                      width: 10.0,
                     ),
-                    onPressed: () =>
-                        _launchURL('https://github.com/cookieopjax'),
-                    color: Colors.grey[800],
-                  ),
+                    Expanded(
+                      child: RaisedButton(
+                        child: Row(
+                          children: <Widget>[
+                            Image(
+                              image: NetworkImage('https://upload.cc/i1/2020/05/25/wMsvRu.png'),
+                              width:20.0,
+                            ),
+                            SizedBox(
+                              width: 8.0,
+                            ),
+                            Text(
+                              'Github',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18.0
+                              ),
+                            ),
+                          ],
+                        ),
+                        onPressed: () =>
+                            _launchURL('https://www.facebook.com/Meekcivik/'),
+                        color: Colors.grey[800],
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: RaisedButton(
+                        child: Row(
+                          children: <Widget>[
+                            Image(
+                              image: NetworkImage('https://upload.cc/i1/2020/05/25/n1VC82.png'),
+                              width:20.0,
+                            ),
+                            SizedBox(
+                              width: 8.0,
+                            ),
+                            Text(
+                              'Instagram',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18.0
+                              ),
+                            ),
+                          ],
+                        ),
+                        onPressed: () =>
+                            _launchURL('https://www.instagram.com/vigor01690/'),
+                        color: Colors.grey[800],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Expanded(
+                      child: RaisedButton(
+                        child: Row(
+                          children: <Widget>[
+                            Image(
+                              image: NetworkImage('https://upload.cc/i1/2020/05/25/WHlBA6.png'),
+                              width:20.0,
+                            ),
+                            SizedBox(
+                              width: 8.0,
+                            ),
+                            Text(
+                              'Youtube',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18.0
+                              ),
+                            ),
+                          ],
+                        ),
+                        onPressed: () =>
+                            _launchURL('https://www.youtube.com/channel/UCJuPCbPknZ2R5M6KoFjVhSQ?view_as=subscriber'),
+                        color: Colors.grey[800],
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -138,8 +208,14 @@ Drawer buildDrawer(BuildContext context) {
     child: ListView(
       children: <Widget>[
         Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: NetworkImage(
+                  'http://35.229.209.153/wp-content/uploads/2020/03/cropped-IMG_3093.png'),
+              fit: BoxFit.cover,
+            ),
+          ),
           height: 80.0,
-          color: Colors.grey[800],
           alignment: Alignment.center,
           child: Row(
             children: <Widget>[
